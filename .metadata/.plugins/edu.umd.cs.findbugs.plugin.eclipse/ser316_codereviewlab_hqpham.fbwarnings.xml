@@ -1,0 +1,113 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<BugCollection version="3.0.2-dev-20160306-90c514b" sequence="4" timestamp="1491542069814" analysisTimestamp="1491542067686" release="">
+  <Project projectName="ser316_codereviewlab_hqpham">
+    <Jar>/home/hqpham/Downloads/GitWork/ser316_codereviewlab_hqpham/ser316_codereviewlab_hqpham/classes</Jar>
+    <AuxClasspathEntry>/home/hqpham/Downloads/GitWork/ser316_codereviewlab_hqpham/ser316_codereviewlab_hqpham/classes</AuxClasspathEntry>
+    <AuxClasspathEntry>/home/hqpham/JUnit/junit-4.12.jar</AuxClasspathEntry>
+    <AuxClasspathEntry>/usr/lib/jvm/java-8-oracle/jre/lib/rt.jar</AuxClasspathEntry>
+    <SrcDir>/home/hqpham/Downloads/GitWork/ser316_codereviewlab_hqpham/ser316_codereviewlab_hqpham/src</SrcDir>
+    <Cloud id="edu.umd.cs.findbugs.cloud.doNothingCloud" online="false"></Cloud>
+  </Project>
+  <BugInstance type="OBL_UNSATISFIED_OBLIGATION_EXCEPTION_EDGE" priority="2" rank="20" abbrev="OBL" category="EXPERIMENTAL" first="1">
+    <Class classname="banking.gui.MainFrame">
+      <SourceLine classname="banking.gui.MainFrame" sourcefile="MainFrame.java" sourcepath="banking/gui/MainFrame.java"/>
+    </Class>
+    <Method classname="banking.gui.MainFrame" name="&lt;init&gt;" signature="(Ljava/lang/String;)V" isStatic="false">
+      <SourceLine classname="banking.gui.MainFrame" start="30" end="47" startBytecode="0" endBytecode="214" sourcefile="MainFrame.java" sourcepath="banking/gui/MainFrame.java"/>
+    </Method>
+    <Class classname="java.io.InputStream" role="CLASS_REFTYPE">
+      <SourceLine classname="java.io.InputStream" sourcefile="InputStream.java" sourcepath="java/io/InputStream.java"/>
+    </Class>
+    <Int value="1" role="INT_OBLIGATIONS_REMAINING"/>
+    <SourceLine classname="banking.gui.MainFrame" start="39" end="39" startBytecode="32" endBytecode="32" sourcefile="MainFrame.java" sourcepath="banking/gui/MainFrame.java" role="SOURCE_LINE_OBLIGATION_CREATED"/>
+    <SourceLine classname="banking.gui.MainFrame" start="40" end="40" startBytecode="36" endBytecode="36" sourcefile="MainFrame.java" sourcepath="banking/gui/MainFrame.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="banking.gui.MainFrame" start="42" end="42" startBytecode="51" endBytecode="51" sourcefile="MainFrame.java" sourcepath="banking/gui/MainFrame.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="banking.gui.MainFrame" start="43" end="43" startBytecode="52" endBytecode="52" sourcefile="MainFrame.java" sourcepath="banking/gui/MainFrame.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <SourceLine classname="banking.gui.MainFrame" start="44" end="44" startBytecode="56" endBytecode="56" sourcefile="MainFrame.java" sourcepath="banking/gui/MainFrame.java" role="SOURCE_LINE_PATH_CONTINUES"/>
+    <String value="{InputStream x 1}" role="STRING_REMAINING_OBLIGATIONS"/>
+  </BugInstance>
+  <BugInstance type="MS_PKGPROTECT" priority="2" rank="18" abbrev="MS" category="MALICIOUS_CODE" first="1">
+    <Class classname="banking.primitive.core.AccountServerFactory">
+      <SourceLine classname="banking.primitive.core.AccountServerFactory" sourcefile="AccountServerFactory.java" sourcepath="banking/primitive/core/AccountServerFactory.java"/>
+    </Class>
+    <Field classname="banking.primitive.core.AccountServerFactory" name="singleton" signature="Lbanking/primitive/core/AccountServerFactory;" isStatic="true">
+      <SourceLine classname="banking.primitive.core.AccountServerFactory" sourcefile="AccountServerFactory.java" sourcepath="banking/primitive/core/AccountServerFactory.java"/>
+    </Field>
+    <SourceLine classname="banking.primitive.core.AccountServerFactory" start="6" end="6" startBytecode="1" endBytecode="1" sourcefile="AccountServerFactory.java" sourcepath="banking/primitive/core/AccountServerFactory.java"/>
+  </BugInstance>
+  <BugInstance type="GC_UNRELATED_TYPES" priority="1" rank="1" abbrev="GC" category="CORRECTNESS" first="1" last="3" removedByChange="true">
+    <Class classname="banking.primitive.core.ServerSolution">
+      <SourceLine classname="banking.primitive.core.ServerSolution" sourcefile="ServerSolution.java" sourcepath="banking/primitive/core/ServerSolution.java"/>
+    </Class>
+    <Method classname="banking.primitive.core.ServerSolution" name="saveAccounts" signature="()V" isStatic="false">
+      <SourceLine classname="banking.primitive.core.ServerSolution" start="108" end="128" startBytecode="0" endBytecode="66" sourcefile="ServerSolution.java" sourcepath="banking/primitive/core/ServerSolution.java"/>
+    </Method>
+    <Type descriptor="Ljava/lang/Integer;" role="TYPE_FOUND">
+      <SourceLine classname="java.lang.Integer" start="52" end="1590" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+    </Type>
+    <Type descriptor="Ljava/lang/String;" role="TYPE_EXPECTED">
+      <SourceLine classname="java.lang.String" start="111" end="3141" sourcefile="String.java" sourcepath="java/lang/String.java"/>
+    </Type>
+    <Method classname="java.util.Map" name="get" signature="(Ljava/lang/Object;)Ljava/lang/Object;" isStatic="false" role="METHOD_CALLED">
+      <SourceLine classname="java.util.Map" sourcefile="Map.java" sourcepath="java/util/Map.java"/>
+    </Method>
+    <Field classname="banking.primitive.core.ServerSolution" name="accountMap" signature="Ljava/util/Map;" sourceSignature="Ljava/util/Map&lt;Ljava/lang/String;Lbanking/primitive/core/Account;&gt;;" isStatic="false" role="FIELD_INVOKED_ON">
+      <SourceLine classname="banking.primitive.core.ServerSolution" sourcefile="ServerSolution.java" sourcepath="banking/primitive/core/ServerSolution.java"/>
+    </Field>
+    <Method classname="java.lang.Integer" name="equals" signature="(Ljava/lang/Object;)Z" isStatic="false" role="METHOD_EQUALS_USED">
+      <SourceLine classname="java.lang.Integer" start="974" end="977" startBytecode="0" endBytecode="72" sourcefile="Integer.java" sourcepath="java/lang/Integer.java"/>
+    </Method>
+    <SourceLine classname="banking.primitive.core.ServerSolution" start="114" end="114" startBytecode="50" endBytecode="50" sourcefile="ServerSolution.java" sourcepath="banking/primitive/core/ServerSolution.java"/>
+    <SourceLine classname="banking.primitive.core.ServerSolution" start="114" end="114" startBytecode="50" endBytecode="50" sourcefile="ServerSolution.java" sourcepath="banking/primitive/core/ServerSolution.java"/>
+  </BugInstance>
+  <Errors errors="0" missingClasses="0"></Errors>
+  <FindBugsSummary timestamp="Thu, 6 Apr 2017 22:14:10 -0700" total_classes="15" referenced_classes="305" total_bugs="2" total_size="361" num_packages="2" java_version="1.8.0_121" vm_version="25.121-b13" cpu_seconds="7.16" clock_seconds="2.13" peak_mbytes="769.41" alloc_mbytes="1024.00" gc_seconds="0.12" priority_2="2">
+    <PackageStats package="banking.gui" total_bugs="1" total_types="8" total_size="158" priority_2="1">
+      <ClassStats class="banking.gui.Main" sourceFile="Main.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="banking.gui.MainFrame" sourceFile="MainFrame.java" interface="false" size="74" bugs="1" priority_2="1"/>
+      <ClassStats class="banking.gui.MainFrame$DepositHandler" sourceFile="MainFrame.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="banking.gui.MainFrame$DisplayHandler" sourceFile="MainFrame.java" interface="false" size="17" bugs="0"/>
+      <ClassStats class="banking.gui.MainFrame$FrameHandler" sourceFile="MainFrame.java" interface="false" size="6" bugs="0"/>
+      <ClassStats class="banking.gui.MainFrame$NewAccountHandler" sourceFile="MainFrame.java" interface="false" size="13" bugs="0"/>
+      <ClassStats class="banking.gui.MainFrame$SaveAccountsHandler" sourceFile="MainFrame.java" interface="false" size="10" bugs="0"/>
+      <ClassStats class="banking.gui.MainFrame$WithdrawHandler" sourceFile="MainFrame.java" interface="false" size="13" bugs="0"/>
+    </PackageStats>
+    <PackageStats package="banking.primitive.core" total_bugs="1" total_types="7" total_size="203" priority_2="1">
+      <ClassStats class="banking.primitive.core.Account" sourceFile="Account.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="banking.primitive.core.Account$State" sourceFile="Account.java" interface="false" size="12" bugs="0"/>
+      <ClassStats class="banking.primitive.core.AccountServer" sourceFile="AccountServer.java" interface="true" size="7" bugs="0"/>
+      <ClassStats class="banking.primitive.core.AccountServerFactory" sourceFile="AccountServerFactory.java" interface="false" size="13" bugs="1" priority_2="1"/>
+      <ClassStats class="banking.primitive.core.Checking" sourceFile="Checking.java" interface="false" size="34" bugs="0"/>
+      <ClassStats class="banking.primitive.core.Savings" sourceFile="Savings.java" interface="false" size="30" bugs="0"/>
+      <ClassStats class="banking.primitive.core.ServerSolution" sourceFile="ServerSolution.java" interface="false" size="77" bugs="0"/>
+    </PackageStats>
+    <FindBugsProfile>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassInfoAnalysisEngine" totalMilliseconds="403" invocations="1503" avgMicrosecondsPerInvocation="268" maxMicrosecondsPerInvocation="37659" standardDeviationMircosecondsPerInvocation="1341"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindNoSideEffectMethods" totalMilliseconds="208" invocations="305" avgMicrosecondsPerInvocation="684" maxMicrosecondsPerInvocation="21077" standardDeviationMircosecondsPerInvocation="1634"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FieldItemSummary" totalMilliseconds="187" invocations="305" avgMicrosecondsPerInvocation="614" maxMicrosecondsPerInvocation="14893" standardDeviationMircosecondsPerInvocation="1302"/>
+      <ClassProfile name="de.tobject.findbugs.builder.FindBugs2Eclipse" totalMilliseconds="155" invocations="2" avgMicrosecondsPerInvocation="77828" maxMicrosecondsPerInvocation="104082" standardDeviationMircosecondsPerInvocation="26254"/>
+      <ClassProfile name="edu.umd.cs.findbugs.OpcodeStack$JumpInfoFactory" totalMilliseconds="110" invocations="697" avgMicrosecondsPerInvocation="159" maxMicrosecondsPerInvocation="1914" standardDeviationMircosecondsPerInvocation="172"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ExplicitSerialization" totalMilliseconds="73" invocations="305" avgMicrosecondsPerInvocation="240" maxMicrosecondsPerInvocation="28670" standardDeviationMircosecondsPerInvocation="1911"/>
+      <ClassProfile name="edu.umd.cs.findbugs.util.TopologicalSort" totalMilliseconds="60" invocations="1457" avgMicrosecondsPerInvocation="41" maxMicrosecondsPerInvocation="29662" standardDeviationMircosecondsPerInvocation="777"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.NoteDirectlyRelevantTypeQualifiers" totalMilliseconds="53" invocations="305" avgMicrosecondsPerInvocation="174" maxMicrosecondsPerInvocation="5879" standardDeviationMircosecondsPerInvocation="413"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FindDoubleCheck" totalMilliseconds="47" invocations="15" avgMicrosecondsPerInvocation="3198" maxMicrosecondsPerInvocation="45139" standardDeviationMircosecondsPerInvocation="11210"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.ClassDataAnalysisEngine" totalMilliseconds="47" invocations="1506" avgMicrosecondsPerInvocation="31" maxMicrosecondsPerInvocation="164" standardDeviationMircosecondsPerInvocation="16"/>
+      <ClassProfile name="edu.umd.cs.findbugs.ba.npe.NullDerefAndRedundantComparisonFinder" totalMilliseconds="39" invocations="53" avgMicrosecondsPerInvocation="750" maxMicrosecondsPerInvocation="8553" standardDeviationMircosecondsPerInvocation="1273"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.CalledMethods" totalMilliseconds="38" invocations="305" avgMicrosecondsPerInvocation="124" maxMicrosecondsPerInvocation="3962" standardDeviationMircosecondsPerInvocation="296"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.IsNullValueDataflowFactory" totalMilliseconds="36" invocations="53" avgMicrosecondsPerInvocation="690" maxMicrosecondsPerInvocation="6131" standardDeviationMircosecondsPerInvocation="1133"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.JavaClassAnalysisEngine" totalMilliseconds="33" invocations="369" avgMicrosecondsPerInvocation="91" maxMicrosecondsPerInvocation="1254" standardDeviationMircosecondsPerInvocation="129"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.FunctionsThatMightBeMistakenForProcedures" totalMilliseconds="32" invocations="305" avgMicrosecondsPerInvocation="107" maxMicrosecondsPerInvocation="2070" standardDeviationMircosecondsPerInvocation="205"/>
+      <ClassProfile name="edu.umd.cs.findbugs.classfile.engine.bcel.ValueNumberDataflowFactory" totalMilliseconds="31" invocations="55" avgMicrosecondsPerInvocation="576" maxMicrosecondsPerInvocation="4665" standardDeviationMircosecondsPerInvocation="1001"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.ReflectiveClasses" totalMilliseconds="29" invocations="305" avgMicrosecondsPerInvocation="98" maxMicrosecondsPerInvocation="2765" standardDeviationMircosecondsPerInvocation="228"/>
+      <ClassProfile name="edu.umd.cs.findbugs.detect.BuildObligationPolicyDatabase" totalMilliseconds="29" invocations="305" avgMicrosecondsPerInvocation="96" maxMicrosecondsPerInvocation="1143" standardDeviationMircosecondsPerInvocation="138"/>
+    </FindBugsProfile>
+  </FindBugsSummary>
+  <ClassFeatures></ClassFeatures>
+  <History>
+    <AppVersion sequence="0" timestamp="1491541406389" release="" codeSize="0" numClasses="0"/>
+    <AppVersion sequence="1" timestamp="1491541406389" release="" codeSize="361" numClasses="15"/>
+    <AppVersion sequence="2" timestamp="1491541898086" release="" codeSize="361" numClasses="15"/>
+    <AppVersion sequence="3" timestamp="1491541969062" release="" codeSize="361" numClasses="15"/>
+  </History>
+</BugCollection>
