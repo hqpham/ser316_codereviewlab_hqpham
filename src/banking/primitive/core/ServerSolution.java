@@ -75,7 +75,10 @@ class ServerSolution implements AccountServer {
 		
 		for(Account acc : accountMap.values()) 
 		{
-			return(false);
+			if(acc.getName() == name)
+			{
+				return(false);
+			}
 		}
 		return newAccountFactory(type, name, balance);
 	}
